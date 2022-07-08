@@ -3,7 +3,11 @@
 @section('content')
     <div class="container">
 
-        <h1 class="mb-4">Index della CRUDe</h1>
+        <div class="row d-flex justify-content-between align-items-center">
+            <h1 class="mb-4">Index della CRUDe</h1>
+            <a href="{{ route('admin.posts.create') }}" class="btn btn-warning">Crea nuovo Post</a>
+        </div>
+
 
         <table class="table">
             <thead>
