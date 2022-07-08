@@ -27,12 +27,6 @@
                     Vai alla pagina pubblica
                 </a>
 
-                @auth
-                <a class="navbar-brand" href="{{ route('admin.posts.index') }}">
-                    Vai all'Index CRUD
-                </a>
-                @endauth
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -62,6 +56,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href="{{ route('admin.posts.index') }}">
+                                        Vai all'Index CRUD
+                                    </a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
