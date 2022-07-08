@@ -13,7 +13,7 @@
         </ul>
         <div class="card-body">
             <a href="{{ route('admin.posts.index') }}" class="btn btn-primary">Torna ai posts</a>
-            <a href="#" class="btn btn-success">Modifica</a>
+            <a href="{{ route('admin.posts.edit', $post) }}" class="btn btn-success">Modifica</a>
         </div>
     </div>
 </div>
