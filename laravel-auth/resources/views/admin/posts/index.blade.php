@@ -29,7 +29,7 @@
                     <td>{{ $post->content }}</td>
                     <td class="d-flex">
                         <a href="{{ route('admin.posts.show', $post) }}" class="btn btn-primary">Visualizza</a>
-                        <a href="#" class="btn mx-3 btn-success">Modifica</a>
+                        <a href="{{ route('admin.posts.edit', $post) }}" class="btn mx-3 btn-success">Modifica</a>
                         <a href="#" class="btn btn-danger">Cancella</a>
                     </td>
                 </tr>

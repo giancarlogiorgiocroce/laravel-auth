@@ -2,13 +2,14 @@
 
 @section('content')
 <div class="container">
-    <form action="{{ route('admin.posts.store') }}" method="POST">
+    <form action="{{ route('admin.posts.update', $post) }}" method="POST">
         @csrf
+        @method('PUT')
 
         <div class="form-group">
             <label for="title">Titolo del Post</label>
-            <input type="text" value="{{old('title')}}"
-                class="form-control @error('name') is-invalid @enderror"
+            <input type="text" value="{{old('title', $post->title)}}"
+                class="form-control @error('title') is-invalid @enderror"
                 id="title" name="title"
                 placeholder="Scrivi qualcosa"
             >
@@ -20,10 +21,10 @@
         <div class="form-group">
             <label for="content">Contenuto del Post</label>
             <textarea type="text"
-                    class="form-control @error('name') is-invalid @enderror"
+                    class="form-control @error('content') is-invalid @enderror"
                     id="content" name="content"
                     placeholder="Scrivi qualcosa"
-            >{{old('content')}}
+            >{{old('content', $post->content)}}
             </textarea>
             @error('content')
                 <p class="text-danger">{{ $message }}</p>
